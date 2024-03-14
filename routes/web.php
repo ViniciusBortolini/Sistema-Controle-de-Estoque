@@ -26,3 +26,24 @@ Route::get('/produtos', [ProdutoController::class, 'index'])->name('produto.list
 
 // Rota para exibir o formulário de cadastro de produto
 Route::get('/produtos/cadastro', [ProdutoController::class, 'telaCadastro'])->name('produto.cadastro');
+
+
+
+use App\Http\Controllers\EstoqueController;
+// Rota para processar o cadastro de um novo registro no estoque
+Route::post('/estoque/novo', [EstoqueController::class, 'cadastrar'])->name('estoque.entrada');
+
+// Rota para exibir a lista de estoques
+Route::get('/estoque', [EstoqueController::class, 'index'])->name('estoque.listar');
+
+// Rota para exibir o formulário de inclusão de estoque
+Route::get('/estoque/cadastro', [EstoqueController::class, 'telaCadastro'])->name('estoque.cadastro');
+
+// Rota para excluir um item do estoque
+Route::get('estoque/excluir/{id}', [EstoqueController::class, 'excluir'])->name('estoque.excluir');
+
+// Rota para exibir o formulário de edição de produto
+Route::get('estoque/editar/{id}', [EstoqueController::class, 'telaEditar'])->name('estoque.editar');
+
+// Rota para processar a edição de um estoque
+Route::post('estoque/edita', [EstoqueController::class, 'editar'])->name('estoque.edita');

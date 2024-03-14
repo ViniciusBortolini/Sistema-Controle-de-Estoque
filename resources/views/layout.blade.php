@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
@@ -22,7 +22,9 @@
               Cadastrar
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownCadastrar">
-              <a class="dropdown-item" href="{{route('produto.cadastro')}}">Produtos</a>
+              <a class="dropdown-item" href="{{route('produto.cadastro')}}">Cadastrar Produtos</a>
+              <a class="dropdown-item" href="{{route('estoque.cadastro')}}">Lançar Entrada no Estoque</a>
+
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -32,6 +34,8 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownVisualizar">
               <a class="dropdown-item" href="{{route('produto.listar')}}">Produtos</a>
+              <a class="dropdown-item" href="{{route('estoque.listar')}}">Estoque</a>
+
             </div>
           </li>
         </ul>
@@ -43,6 +47,8 @@
     @yield('produtoCadastrar')
     @yield('produtoListar')
     @yield('produtoAlterar')
+    @yield('estoqueCadastrar')
+    @yield('estoqueListar')
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
